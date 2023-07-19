@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: "Roboto",sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.713); /*cor-blue*/
+
+}
+
+.container {
+    background-color: #fff;
+    max-width: 1200px; /*850px*/
+    position: relative;  /*Ponto Referencial*/
+    padding: 40px 30px;
+    width: 100%;
+    box-shadow: 0 5px 20px orange;  /*(124, 112, 112, 0.929)*/
+    border-radius: 5px;
+    
+
+}
+
+.container .cover {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    z-index: 2; /* Manipulador de camadas*/
+    transition: all 1s ease; /* Esperar acontecer */
+    transform-origin: left; /* Esperar acontecer */
+}
+
+.container .cover img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container #flip:checked ~ .cover {
+    transform: rotateY(-180deg);
+}
+
+/***********AULA 2************/
+
+.container .cover .text {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .forms .form-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-content .login-form , 
+.form-content .signup-form {
+
+    width: calc(100% /2 - 25px);
+    
+} 
+
+.forms .form-content .title {
+
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    color: blue;
+
+
+}
+
+.forms .form-content .title:before {
+
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 25px;
+    background-color: rgb(237, 7, 7);
+}
+
+.forms .form-content .input-boxes {
+
+    margin-top: 1rem;
+}
+
+.forms .form-content .input-box {
+
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.forms .input-box input {
+
+    height: 100%;
+    width: 100%;
+    outline: none; /* Tira as bordas visiveis quando clica pra digitar*/ 
+    border: none; /* Tira as bordas visiveis*/ 
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.forms .form-content .text a {
+
+    text-decoration: none;
+    color: red;
+}
+
+.forms .form-content .text a:hover {
+
+    text-decoration: underline;
+}
+
+.forms .form-content .button {
+
+    color: #fff;
+    margin-top: 3rem;
+}
+
+.forms .form-content .button input {
+
+    color: #fff;
+    background-color: lightblue;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.forms .form-content .button input:hover {
+
+    background-color: red;
+}
+
+
+.forms .form-content label {
+
+    color: rgb(233, 22, 18);
+    cursor: pointer;
+}
+
+.forms .form-content label:hover {
+
+    text-decoration: underline;
+}
+
+.container #flip {
+
+    display: none;
+}
+
+@media (max-width:730px) {
+
+    .container .cover {
+        display: none
+    }
+    
+    .form-content .login-form,
+    .form-content .signup-form {
+
+        width: 100%;
+    }
+
+    .form-content .signup-form {
+
+        display: none;
+    }
+
+    .container #flip:checked ~ .forms .signup-form {
+
+        display: block;
+    }
+
+    .container #flip:checked ~ .forms .login-form {
+
+        display: none;
+    }
+
+}
+
+.container .cover .front,
+.container .cover .back {
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+

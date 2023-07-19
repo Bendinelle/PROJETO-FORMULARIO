@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aula 1 - Formulário</title>
+</head>
+<body>
+    <div class="container">
+      <input type="checkbox" id="flip" />
+      <div class="cover">
+        <!--COMEÇO DA FRONT-->
+        <div class="front">
+          <img src="./scania.jpg" alt="Scania" />
+          <div class="text">
+            <span class="text-1"><br /></span>
+            <span class="text-2"></span>
+          </div>
+        </div>
+        <!--FIM DA FRONT-->
+        <!--COMEÇO DA BACK-->
+        <div class="back">
+          <img src="./scania.jpg" alt="Scania 770" />
+          <div class="text">
+            <span class="text-1"><br /></span>
+            <span class="text-2"></span>
+          </div>
+        </div>
+        <!--FIM da back-->
+      </div>
+      <!--FIM DA COVER-->
+
+      <!--INICIO DA FORMS-->
+      <div class="forms">
+        <!--INICIO FORM CONTENT-->
+        <div class="form-content">
+          <!--INICIO DA LOGIN FORM-->
+          <div class="login-form">
+            <div class="title">Login</div>
+            <form action="#">
+              <div class="input-boxes">
+                <div class="input-box">
+                  <input type="email" placeholder="Digite seu Email" required />
+                </div>
+                <div class="input-box">
+                  <input
+                    type="password"
+                    placeholder="Digite seu Password"
+                    required
+                  />
+                </div>
+
+                <div class="text"><a href="">Esqueceu a senha ?</a></div>
+                <div class="button input-box">
+                  <input type="submit" value="Entrar" />
+                </div>
+                <div class="text sign-up-text">
+                  Não possui conta ?
+                  <label for="flip">Criar conta</label>
+                </div>
+              </div>
+              <!--Fim da inputboxes-->
+            </form>
+          </div>
+          <!--FIM DA LOGIN FORM-->
+
+          <!--INICIO DA signup FORM-->
+          <div class="signup-form">
+            <div class="title">Cadastre-se</div>
+            <form action="#">
+              <div class="input-boxes">
+                <div class="input-box">
+                  <input type="text" placeholder="Digite seu nome" required />
+                </div>
+                <div class="input-box">
+                  <input
+                    type="email"
+                    placeholder="Digite seu Email"
+                    required
+                  />
+                </div>
+                <div class="input-box">
+                  <input
+                    type="password"
+                    placeholder="Digite seu Password"
+                    required
+                  />
+                </div>
+
+                <div class="button input-box">
+                  <input type="submit" value="Cadastrar" />
+                </div>
+                <div class="text sign-up-text">
+                  Ja possui conta ?
+                  <label for="flip">Faça login</label>
+                </div>
+              </div>
+            </form>
+        
+        
+        <!--FIM DA signup -->
+      </div>
+        <!--FIM DA FORM CONTENT-->
+      </div>
+      <!--FIM DA FORMS-->
+    </div>
+  </body>
+</html>
